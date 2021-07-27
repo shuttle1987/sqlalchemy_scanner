@@ -17,7 +17,7 @@ if __name__ == "__main__":
                     title=row["title"],
                     description=row["description"],
                     due_date=row["due_date"],
-                    status=row["status"],
+                    status=models.string_to_taskstatusenum(row["status"]),
                 )
                 db.add(task)
         db.commit()

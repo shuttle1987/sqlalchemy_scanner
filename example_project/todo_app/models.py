@@ -1,7 +1,10 @@
-from sqlalchemy import Column, Integer, String, Text
+import enum
+
+from sqlalchemy import Column, Integer, String, Text, Enum
 from sqlalchemy.types import Date
 
 from .database import Base
+
 
 
 class TaskStatusEnum(enum.Enum):
@@ -9,6 +12,12 @@ class TaskStatusEnum(enum.Enum):
     in_progess = 2
     completed = 3
     cancelled = 4
+
+
+def string_to_taskstatusenum(s: str) -> TaskStatusEnum:
+    res = TaskStatusEnum[s.lower().replace(' ','_')]
+    return res
+
 
 class Task(Base):
     """DB model for a TODO list task"""

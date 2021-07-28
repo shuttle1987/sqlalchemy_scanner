@@ -20,7 +20,7 @@ class DictMixIn:
 
 class TaskStatusEnum(enum.Enum):
     not_started = 1
-    in_progess = 2
+    in_progress = 2
     completed = 3
     cancelled = 4
 

@@ -6,7 +6,7 @@ from pathlib import Path
 from todo_app import models
 from todo_app.database import SessionLocal, engine
 
-def import_from_file(csv_path: Path) -> None
+def import_from_file(csv_path: Path) -> None:
     try:
         db = SessionLocal()
 
@@ -16,7 +16,7 @@ def import_from_file(csv_path: Path) -> None
                 task = models.Task(
                     title=row["title"],
                     description=row["description"],
-                    due_date=row["due_date"],
+                    due_date=row["due date"],
                     status=models.string_to_taskstatusenum(row["status"]),
                 )
                 db.add(task)

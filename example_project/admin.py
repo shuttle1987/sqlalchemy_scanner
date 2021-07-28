@@ -3,20 +3,20 @@ import argparse
 from todo_app.app import app
 from todo_app.database import Base, engine
 
-def create_tables():
+def create_tables() -> None:
     """Create database tables for the app"""
     print("Creating database tables using SQLAlchemy ORM")
     Base.metadata.create_all(engine)
     print("Done creating tables")
 
-def drop_tables():
+def drop_tables() -> None:
     """Dropping database tables for the app"""
     print("Dropping database tables using SQLAlchemy ORM")
     Base.metadata.drop_all(engine)
     print("Done dropping tables")
 
-def run_dev_server(port: int=5000):
-    """run the development server"""
+def run_dev_server(port: int=5000) -> None:
+    """Run the web app using the Flask development server"""
     app.run(port=port)
 
 if __name__ == "__main__":

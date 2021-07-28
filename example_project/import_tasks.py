@@ -3,8 +3,8 @@ import csv
 import datetime
 from pathlib import Path
 
-from app import models
-from app.database import SessionLocal, engine
+from todo_app import models
+from todo_app.database import SessionLocal, engine
 
 def import_from_file(csv_path: Path) -> None
     try:

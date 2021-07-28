@@ -1,4 +1,4 @@
-from flask import flask, _app_ctx_stack, jsonify, abort
+from flask import Flask, _app_ctx_stack, jsonify, abort
 from sqlalchemy.orm import scoped_session
 
 from . import models

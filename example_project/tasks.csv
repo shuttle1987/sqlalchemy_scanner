@@ -1,6 +1,6 @@
 title,description,due date,status
-scan packages for models,Scanning the source code will help us find where SQL is interacted with,2021/08/01,in progress
-find line numbers of model definitions,Finding the line numbers where models are defined and used will help in the later report generation step,2021/08/02,not started
-deal with imports,Being able to see what is defined in imported packages might help find where the database is interacted with. This is especially useful if models are used in python modules that were imported.,2021/08/03,not started
-hook into SQLAlchemy runtime,By hooking into the SQLALchemy runtime we can see what models are interacted with while the app is running,2021/08/04,not started
-generate a report,Generate a report of where models are defined and interacted with in the source code,2021/08/05,not started
+scan packages for models,Scanning the source code will help us find where SQL is interacted with,2021-08-01,in progress
+find line numbers of model definitions,Finding the line numbers where models are defined and used will help in the later report generation step,2021-08-02,not started
+deal with imports,Being able to see what is defined in imported packages might help find where the database is interacted with. This is especially useful if models are used in python modules that were imported.,2021-08-03,not started
+hook into SQLAlchemy runtime,By hooking into the SQLALchemy runtime we can see what models are interacted with while the app is running,2021-08-04,not started
+generate a report,Generate a report of where models are defined and interacted with in the source code,2021-08-05,not started

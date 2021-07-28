@@ -16,7 +16,7 @@ def import_from_file(csv_path: Path) -> None:
                 task = models.Task(
                     title=row["title"],
                     description=row["description"],
-                    due_date=row["due date"],
+                    due_date=datetime.date.fromisoformat(row["due date"]),
                     status=models.string_to_taskstatusenum(row["status"]),
                 )
                 db.add(task)
